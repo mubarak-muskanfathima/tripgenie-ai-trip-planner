@@ -174,9 +174,9 @@ Return only JSON.
 });
 
 // Start server
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(
     `TripGenie server running on http://localhost:${PORT}`
   );
