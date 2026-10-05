@@ -1,16 +1,231 @@
-# React + Vite
+# ✈️ TripGenie — AI Trip Planner
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+TripGenie is a full-stack AI-powered travel planning application that creates personalized travel itineraries based on the user's destination, duration, budget, number of travelers, and interests.
 
-Currently, two official plugins are available:
+## 🌍 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- 🔐 User Registration & Login
+- 🔑 JWT-based Authentication
+- 🛡️ Protected Routes
+- 🤖 AI-powered itinerary generation using Google Gemini
+- 📍 Personalized destination planning
+- 📅 Day-by-day travel itinerary
+- 💰 AI-generated budget breakdown
+- 💡 AI travel tips
+- 💾 Save trips to MongoDB
+- 📚 View saved trips in My Trips
+- 🗑️ Delete saved trips
+- 🔄 Refresh-safe trip viewing
+- 📱 Responsive and modern UI
 
-## React Compiler
+## 🛠️ Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Frontend
+- React.js
+- Vite
+- React Router
+- CSS
 
-## Expanding the Oxlint configuration
+### Backend
+- Node.js
+- Express.js
+- REST API
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+### Database
+- MongoDB
+- Mongoose
+
+### Authentication
+- JWT
+- bcryptjs
+
+### AI
+- Google Gemini API
+
+## 📂 Project Structure
+
+```text
+tripgenie-ai-trip-planner/
+│
+├── public/
+│
+├── src/
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── Login.jsx
+│   │   ├── Register.jsx
+│   │   ├── PlanTrip.jsx
+│   │   ├── TripResult.jsx
+│   │   └── MyTrips.jsx
+│   │
+│   ├── App.jsx
+│   ├── App.css
+│   └── ProtectedRoute.jsx
+│
+├── server/
+│   ├── models/
+│   │   ├── Trip.js
+│   │   └── UserTemp.js
+│   │
+│   ├── routes/
+│   │   ├── authRoutes.js
+│   │   └── tripRoutes.js
+│   │
+│   └── server.js
+│
+├── .gitignore
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+## ⚙️ Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/tripgenie-ai-trip-planner.git
+```
+
+### 2. Open the project
+
+```bash
+cd tripgenie-ai-trip-planner
+```
+
+### 3. Install frontend dependencies
+
+```bash
+npm install
+```
+
+### 4. Install backend dependencies
+
+```bash
+cd server
+npm install
+```
+
+### 5. Create the backend `.env` file
+
+Inside the `server` folder, create:
+
+```text
+.env
+```
+
+Add:
+
+```env
+GEMINI_API_KEY=your_gemini_api_key
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+```
+
+Never upload the `.env` file to GitHub.
+
+## ▶️ Run the Application
+
+### Start the backend
+
+From the `server` folder:
+
+```bash
+node server.js
+```
+
+Backend runs on:
+
+```text
+http://localhost:5000
+```
+
+### Start the frontend
+
+Open another terminal in the project root:
+
+```bash
+npm run dev
+```
+
+Frontend runs on:
+
+```text
+http://localhost:5173
+```
+
+## 🔄 Application Flow
+
+```text
+User
+  ↓
+Register / Login
+  ↓
+JWT Authentication
+  ↓
+Plan Trip
+  ↓
+Enter destination, budget, duration & interests
+  ↓
+Gemini AI
+  ↓
+Personalized Itinerary
+  ↓
+Save Trip
+  ↓
+MongoDB
+  ↓
+My Trips
+  ↓
+View / Delete Saved Trip
+```
+
+## 🤖 AI Trip Generation
+
+TripGenie sends the user's travel requirements to Google Gemini and generates:
+
+- Daily itinerary
+- Morning activities
+- Afternoon activities
+- Evening activities
+- Food recommendations
+- Estimated accommodation cost
+- Food cost
+- Transportation cost
+- Activity cost
+- Travel tips
+
+## 🔐 Security
+
+TripGenie uses:
+
+- JWT tokens for authentication
+- bcryptjs for password hashing
+- Protected API routes
+- Environment variables for API keys and database credentials
+
+Sensitive credentials are excluded from Git using `.gitignore`.
+
+## 🚀 Future Improvements
+
+Possible future enhancements include:
+
+- 🌦️ Live weather information
+- 🗺️ Interactive maps
+- 📍 Google Maps integration
+- 🏨 Hotel recommendations
+- ✈️ Flight information
+- 📄 Downloadable itinerary
+- 🔗 Trip sharing
+
+## 👩‍💻 Developer
+
+**Muskan Mubarak**
+
+B.Tech Computer Science & Engineering
+
+### ⭐ Project
+
+**TripGenie — AI Trip Planner**
+
+Built as a full-stack web development project using React, Node.js, Express, MongoDB and Google Gemini AI.
