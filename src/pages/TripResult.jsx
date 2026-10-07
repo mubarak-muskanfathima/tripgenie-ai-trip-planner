@@ -39,7 +39,7 @@ function TripResult() {
         }
 
         const response = await fetch(
-          `http://localhost:5000/api/trips/${tripId}`,
+          `https://tripgenie-ai-trip-planner.onrender.com/api/trips/${tripId}`,
           {
             method: "GET",
             headers: {

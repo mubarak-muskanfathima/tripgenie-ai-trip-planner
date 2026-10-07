@@ -61,7 +61,7 @@ function PlanTrip() {
 
       // Generate trip using Gemini
       const response = await fetch(
-        "http://localhost:5000/api/generate-trip",
+        "https://tripgenie-ai-trip-planner.onrender.com/api/generate-trip",
         {
           method: "POST",
           headers: {
@@ -84,7 +84,7 @@ function PlanTrip() {
       // Save generated trip to MongoDB
       try {
         const saveResponse = await fetch(
-          "http://localhost:5000/api/trips/save",
+          "https://tripgenie-ai-trip-planner.onrender.com/api/trips/save",
           {
             method: "POST",
             headers: {

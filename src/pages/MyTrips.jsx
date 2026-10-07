@@ -19,7 +19,7 @@ function MyTrips() {
         }
 
         const response = await fetch(
-          "http://localhost:5000/api/trips/my-trips",
+          "https://tripgenie-ai-trip-planner.onrender.com/api/trips/my-trips",
           {
             method: "GET",
             headers: {
@@ -78,7 +78,7 @@ function MyTrips() {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        `http://localhost:5000/api/trips/${tripId}`,
+        `https://tripgenie-ai-trip-planner.onrender.com/api/trips/${tripId}`,
         {
           method: "DELETE",
           headers: {
